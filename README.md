@@ -1,5 +1,4 @@
-<include a CircleCI status badge, here>
-
+[![ahmedhussien](https://circleci.com/gh/ahmedhussien/udacityproject04.svg?style=svg)](https://app.circleci.com/pipelines/github/ahmedhussien/udacityproject04?branch=master)
 ## Project Overview
 
 In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
