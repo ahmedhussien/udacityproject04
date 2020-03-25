@@ -1,0 +1,12 @@
+^Cahussien@ahussien:~/DevOps_Microservices/project-ml-microservice-kubernetes$ kubectl get pod
+NAME              READY   STATUS    RESTARTS   AGE
+udacityproject4   1/1     Running   0          16m
+ahussien@ahussien:~/DevOps_Microservices/project-ml-microservice-kubernetes$ sudo ./run_kubernetes.sh
+[sudo] password for ahussien:
+Error from server (AlreadyExists): pods "udacityproject4" already exists
+NAME              READY   STATUS    RESTARTS   AGE
+udacityproject4   1/1     Running   0          16m
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
+
