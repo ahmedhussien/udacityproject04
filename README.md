@@ -1,41 +1,30 @@
 [![ahmedhussien](https://circleci.com/gh/ahmedhussien/udacityproject04.svg?style=svg)](https://app.circleci.com/pipelines/github/ahmedhussien/udacityproject04?branch=master)
-## Project Overview
+# Project Summary
+This project is a final project for the fourth course in Cloud DevOps nanodegree by Udcacity.
 
-In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
+The Projetc is Operationalize a Machine Learning Microservice API
+# How to use
+Run in Docker: ./run_docker.sh
+Run in Kubernetes: ./run_kubernetes.sh
+To make prediction: ./make_predicion.sh 
 
-You are given a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. You can read more about the data, which was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing). This project tests your ability to operationalize a Python flask app—in a provided file, `app.py`—that serves out predictions (inference) about housing prices through API calls. This project could be extended to any pre-trained machine learning model, such as those for image recognition and data labeling.
+# Files included in this repository: 
+app.py : The python flask app
 
-### Project Tasks
+Makefile : A file used to setup and build the project - mainly used for linting the dockerfile.
 
-Your project goal is to operationalize this working, machine learning microservice using [kubernetes](https://kubernetes.io/), which is an open-source system for automating the management of containerized applications. In this project you will:
-* Test your project code using linting
-* Complete a Dockerfile to containerize this application
-* Deploy your containerized application using Docker and make a prediction
-* Improve the log statements in the source code for this application
-* Configure Kubernetes and create a Kubernetes cluster
-* Deploy a container using Kubernetes and make a prediction
-* Upload a complete Github repo with CircleCI to indicate that your code has been tested
+Dockerfile : A file that contains instructions to bild a docker image.
 
-You can find a detailed [project rubric, here](https://review.udacity.com/#!/rubrics/2576/view).
+make_prediction.sh : A script to run a query against the machine learning API running on port 8000.
 
-**The final implementation of the project will showcase your abilities to operationalize production microservices.**
+requirements.txt : A file that describes the dependencies required by the python application running on the docker container.
 
----
+run_docker.sh : A script to build, tag and run a docker image
 
-## Setup the Environment
+run_kubernetes.sh : A script to download a docker image from the docker hub and run this image locally on kubernetes.
 
-* Create a virtualenv and activate it
-* Run `make install` to install the necessary dependencies
+upload_docker.sh: A script to push/upload a docker image to the docker hub.
 
-### Running `app.py`
+model_data : A folder containing the machine learning model and associated files.
 
-1. Standalone:  `python app.py`
-2. Run in Docker:  `./run_docker.sh`
-3. Run in Kubernetes:  `./run_kubernetes.sh`
-
-### Kubernetes Steps
-
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
-* Create Flask app in Container
-* Run via kubectl
+output_txt_files : A folder containing the required text files - docker_out.txt and kubernetes_out.txt
